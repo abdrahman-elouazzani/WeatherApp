@@ -1,7 +1,9 @@
 package com.example.weatherapp.ui.weather.cityWeatherDetails
 
+import android.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import com.example.weatherapp.data.api.WeatherApiService
 import com.example.weatherapp.data.model.CurrentWeather
@@ -23,8 +25,11 @@ class CityWeatherDetailsActivity : AppCompatActivity() {
             CityWeatherViewModelFactory(ForecastRepositoryImp(weatherApiService)))
             .get(CityWeatherDetailsViewModel::class.java)
         viewModel.currentWeather.observe(this,{
-            if (it != null) {
+            if (viewModel.networkStatus.value?.status.equals("Success")) {
                 fetchData(it)
+
+            } else {
+                Toast.makeText(this,"error connection to service",Toast.LENGTH_LONG).show()
             }
 
         })

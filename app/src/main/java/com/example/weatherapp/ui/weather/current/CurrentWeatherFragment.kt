@@ -47,8 +47,11 @@ class CurrentWeatherFragment : Fragment() {
 
         viewModel = ViewModelProviders.of(this, CurrentWeatherViewModelFactory(ForecastRepositoryImp(weatherApiService))).get(CurrentWeatherViewModel::class.java)
         viewModel.currentWeather.observe(this, {
-               if (it != null)
+              if (viewModel.networkStatus.value?.status.equals("Success"))
                   fetchData(it)
+            else {
+                Toast.makeText(context!!,"error connection to service",Toast.LENGTH_LONG).show()
+            }
         })
 
        viewModel.getCurrentWeatherData("casablanca")
