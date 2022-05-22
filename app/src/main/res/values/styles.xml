@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="H2MobileCenterGrey">
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:textStyle">normal</item>
+    <item name="android:textSize">28sp</item>
+    <item name="android:lineSpacingExtra">8sp</item>
+    <item name="android:textColor">@color/mono_grey</item>
+  </style>
+
+<style name="H4MobileCenterGreyBold3">
+<item name="android:gravity">center_horizontal</item>
+
+<item name="android:textStyle">bold</item>
+<item name="android:textSize">20sp</item>
+<item name="android:lineSpacingExtra">8sp</item>
+<item name="android:textColor">@color/dark</item>
+</style>
+
+<style name="H3MobileLeftGrey7">
+
+<item name="android:textStyle">normal</item>
+<item name="android:textSize">18sp</item>
+<item name="android:lineSpacingExtra">6sp</item>
+<item name="android:textColor">@color/mono_grey_2</item>
+</style>
+</resources>

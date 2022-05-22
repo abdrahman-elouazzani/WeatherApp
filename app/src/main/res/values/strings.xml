@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="api_key">b303b4fece26f0d63725f69ce0d2de03</string>
+    <string name="temp_uint">°</string>
+    <string name="temp_max_value">"H:%s°"</string>
+    <string name="temp_low_value">"L:%s°"</string>
+    <string name="speed_title">Wind</string>
+    <string name="pressure_title">Pressure</string>
+    <string name="preference_file_key">USER</string>
+</resources>
